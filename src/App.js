@@ -19,6 +19,18 @@ function getRandomInt(min, max) {
 }
 
 function App() {
+    const dateTimeRef = React.useRef<HTMLSpanElement>(null);
+  
+    React.useEffect(() => {
+        const secondsTimer = setInterval(() => {
+          if (dateTimeRef.current) {
+            dateTimeRef.current.innerText = getCurrentDate();
+          }
+        }, 1000);
+        return () => clearInterval(secondsTimer);
+      }, []);
+    
+    
   return (
     <div className="App">
       <header className="App-header">
@@ -26,9 +38,7 @@ function App() {
         <p>
           The time is:
         </p>
-        <h2>
-          {getCurrentDate()}
-        </h2>
+        <h2 ref={dateTimeRef}/>
         <a
           className="App-link"
           href="https://uvg.instructure.com/courses/22069/files/3487964?wrap=1"
