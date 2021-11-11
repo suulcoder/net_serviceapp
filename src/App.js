@@ -31,7 +31,7 @@ function App() {
         </h2>
         <a
           className="App-link"
-          href="#"
+          href="https://uvg.instructure.com/courses/22069/files/3487964?wrap=1"
           target="_blank"
           rel="noopener noreferrer"
         >
