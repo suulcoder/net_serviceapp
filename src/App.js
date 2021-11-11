@@ -24,9 +24,7 @@ function App() {
     
     useEffect(() => {
         const secondsTimer = setInterval(() => {
-          if (dateTimeRef.current) {
            setTime(getCurrentDate());
-          }
         }, 1000);
         return () => clearInterval(secondsTimer);
       }, []);
