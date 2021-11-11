@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,12 +20,12 @@ function getRandomInt(min, max) {
 }
 
 function App() {
-    const dateTimeRef = React.useRef<HTMLSpanElement>(null);
-  
-    React.useEffect(() => {
+    const [time, setTime] = useState(getCurrentDate());
+    
+    useEffect(() => {
         const secondsTimer = setInterval(() => {
           if (dateTimeRef.current) {
-            dateTimeRef.current.innerText = getCurrentDate();
+           setTime(getCurrentDate());
           }
         }, 1000);
         return () => clearInterval(secondsTimer);
@@ -39,7 +39,7 @@ function App() {
         <p>
           The time is:
         </p>
-        <h2 ref={dateTimeRef}/>
+        <h2> {time} <h2/>
         <a
           className="App-link"
           href="https://uvg.instructure.com/courses/22069/files/3487964?wrap=1"
