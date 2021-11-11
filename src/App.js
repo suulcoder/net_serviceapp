@@ -39,7 +39,7 @@ function App() {
         <p>
           The time is:
         </p>
-        <h2> {time} <h2/>
+        <h2> {time} </h2>
         <a
           className="App-link"
           href="https://uvg.instructure.com/courses/22069/files/3487964?wrap=1"
