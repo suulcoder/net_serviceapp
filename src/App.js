@@ -44,7 +44,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-           {"I am a " + getRandomInt(0,100) + "% sure"}
+           {"I am " + getRandomInt(0,100) + "% sure"}
         </a>
       </header>
     </div>
